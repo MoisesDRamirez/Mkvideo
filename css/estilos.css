@@ -2,11 +2,14 @@ body{
     margin: 0;
     font-family: arial;
 }
+h1,h2,h3,h4,h5,h6,ol,ul,p {
+    margin: 0
+}
 .container {
     display: grid;
     height: 100vh;
     grid-template-columns: 25% 1fr 1fr;
-    grid-template-rows: auto 20% 1fr;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas: "nav-left video video " 
                          "nav-left area-like area-like" 
                          "nav-left content area-advertisements" 
@@ -14,26 +17,80 @@ body{
 }
 .nav-left{
     grid-area: nav-left;
-    border: 1px solid red
+    border: 1px solid red;
+    background-color: #0b1128;
+    color: white
+}
+.header{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+}
+.header a {
+    padding: 5px 15px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+.logo{
+  display: grid;  
+  padding: 20px 2px;
+}
+.user{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+}
+.playlist{
+    display: grid;
+    padding: 10px 10px;
+}
+.playlist a{
+    padding: 10px;
+}
+.friends img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.list-friends{
+    padding: 20px;
+}
+.friends-title{
+    padding-bottom: 20px;
+}
+.friends{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 10px 0;
+    align-items: center;
+    gap: 10px
 }
 .video{
     border: 1px solid blue;
-    height: 500px;
     grid-area: video;
+    height: 500px;
 }
 .area-like{
     border: 1px solid green;
     grid-area: area-like;
+    padding: 5%;
 }
 .content{
     border: 1px solid yellow;
     grid-area: content;
+ 
 }
-.area-advertisement{
+.area-advertisements{
     border: 1px solid aqua;
     grid-area: area-advertisements;
+    padding: 50% 0px;
 }
 .footer{
     border: 1px solid grey;
     grid-area: footer;
+    padding: 10px ;
+    background: red;
 }
