@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    font-family: arial;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 25% 1fr 1fr;
+    grid-template-rows: auto 20% 1fr;
+    grid-template-areas: "nav-left video video " 
+                         "nav-left area-like area-like" 
+                         "nav-left content area-advertisements" 
+                         "footer footer footer ";
+}
+.nav-left{
+    grid-area: nav-left;
+    border: 1px solid red
+}
+.video{
+    border: 1px solid blue;
+    height: 500px;
+    grid-area: video;
+}
+.area-like{
+    border: 1px solid green;
+    grid-area: area-like;
+}
+.content{
+    border: 1px solid yellow;
+    grid-area: content;
+}
+.area-advertisement{
+    border: 1px solid aqua;
+    grid-area: area-advertisements;
+}
+.footer{
+    border: 1px solid grey;
+    grid-area: footer;
+}
