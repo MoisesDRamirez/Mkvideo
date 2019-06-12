@@ -71,12 +71,26 @@ a{
 .video{
     border: 1px solid blue;
     grid-area: video;
-    height: 500px;
+    height: 400px;
+    background: black;
+
+}
+.video video{
+    width: 100%;
 }
 .area-like{
     border: 1px solid green;
     grid-area: area-like;
-    padding: 5%;
+    display: grid;
+}
+.area-like a{
+    color:black;
+
+}
+.button-video{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
 }
 .content{
     border: 1px solid yellow;
