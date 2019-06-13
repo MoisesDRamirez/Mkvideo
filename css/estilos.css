@@ -1,3 +1,68 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?t8i9tr');
+  src:  url('../fonts/icomoon.eot?t8i9tr#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?t8i9tr') format('truetype'),
+    url('../fonts/icomoon.woff?t8i9tr') format('woff'),
+    url('../fonts/icomoon.svg?t8i9tr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\e900";
+}
+.icon-home3:before {
+  content: "\e902";
+}
+.icon-redo2:before {
+  content: "\e968";
+}
+.icon-bubbles2:before {
+  content: "\e96d";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-Candado:before {
+  content: "\e98f";
+}
+.icon-cogs:before {
+  content: "\e995";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+.icon-switch:before {
+  content: "\e9b6";
+}
+.icon-menu:before {
+  content: "\1f32a";
+}
+.icon-cloud-download:before {
+  content: "\e9c2";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-paypal:before {
+  content: "\ead8";
+}
 body{
     margin: 0;
     font-family: arial;
@@ -7,7 +72,7 @@ h1,h2,h3,h4,h5,h6,ol,ul,p {
 }
 .container {
     display: grid;
-    height: 100vh;
+    height: 100%;
     grid-template-columns: 25% 1fr 1fr;
     grid-template-rows: auto auto 1fr;
     grid-template-areas: "nav-left video video " 
@@ -80,17 +145,72 @@ a{
 }
 .area-like{
     border: 1px solid green;
+    background-color: #aba9a9;
     grid-area: area-like;
     display: grid;
-}
-.area-like a{
-    color:black;
+    padding: 20px 20px;
+
 
 }
+
+.video-title{
+  padding: 2px 0;
+  font-weight: normal;
+}
+.view-video{
+  padding-bottom: 15px;
+  font-weight: normal;
+}
+.add-list{
+    border: 1px solid red;
+    padding: 8px 0;
+    border-radius: 13px;
+    background: #ff000080;
+}
 .button-video{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 17% 15% 15% 13% 10% 12% 12%;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+.button-video i{
+  font-size: 20px;
+}
+.compartir{
+  color: black;
+}
+.guardar{
+  padding-right: 50px;
+  color: black;
+}
+.tecno{
+  border: 1px solid red;
+  padding: 4px 0;
+  border-radius: 20px;
+  background-color: red;
+  color: white;
+}
+.balada{
+  border: 1px solid aqua;
+  background-color: #35bdbd;
+  color: white;
+  padding: 4px 0;
+  border-radius: 20px;
+}
+.Romantica{
+  border: 1px solid  yellowgreen;
+  background-color: yellowgreen;
+  color: white;
+  padding: 4px 0;
+  border-radius: 20px;
+}
+.Reggaeton{
+  border: 1px solid purple;
+  background-color: purple;
+  color: white;
+  padding: 4px 0;
+  border-radius: 20px;
 }
 .content{
     border: 1px solid yellow;
