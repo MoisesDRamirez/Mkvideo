@@ -213,9 +213,54 @@ a{
   border-radius: 20px;
 }
 .content{
-    border: 1px solid yellow;
-    grid-area: content;
+  border: 1px solid yellow;
+  grid-area: content;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  justify-content: center;
+  align-items: center;
  
+}
+.coment-title{
+  padding-top:10px;
+  color: #312c2c94;
+}
+.coment-list{
+  display: grid;
+  grid-template-columns: 4rem 20rem;
+  grid-template-rows: 1.5rem auto;
+  grid-template-areas: "img leo" "img texto";
+}
+.img-coment{
+  position: absolute;
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+.input-text{
+  position: relative;
+  height: 45px;
+  width: 99%;
+  border-radius: 5px;
+  padding-left: 55px;
+  box-sizing: border-box;
+  background: #dad3d352;
+  border: 1px solid #dad3d352;
+}
+.img{
+  grid-area: img;
+  border-radius: 50%;
+}
+.leo{
+  grid-area: leo;
+}
+.texto{
+  grid-area: texto;
+}
+.content a{
+  color: black;
 }
 .area-advertisements{
     border: 1px solid aqua;
