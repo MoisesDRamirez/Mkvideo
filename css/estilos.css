@@ -219,6 +219,7 @@ a{
   grid-template-rows: auto auto auto auto auto auto auto;
   justify-content: center;
   align-items: center;
+  height: 50%;
  
 }
 .coment-title{
@@ -263,9 +264,22 @@ a{
   color: black;
 }
 .area-advertisements{
-    border: 1px solid aqua;
-    grid-area: area-advertisements;
-    padding: 50% 0px;
+  border: 1px solid aqua;
+  grid-area: area-advertisements;
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 2rem auto auto auto auto;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 10%;
+}
+.area-advertisements a{
+  color: black;
+}
+.title-sugerencia{
+
+  padding: 20px 10px;
+  font-weight: normal;
 }
 .footer{
     border: 1px solid grey;
