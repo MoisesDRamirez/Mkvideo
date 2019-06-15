@@ -112,6 +112,9 @@ a{
   display: grid;  
   padding: 20px 2px;
 }
+.play-title{
+  padding: 10% 0% 5% 0
+}
 .user{
     display: grid;
     grid-template-rows: auto auto auto auto;
@@ -136,7 +139,7 @@ a{
     padding: 20px 0;
 }
 .friends-title{
-    padding-bottom: 20px 0;
+    padding-bottom: 20px ;
 }
 .friends{
     display: grid;
@@ -155,10 +158,11 @@ a{
     width: 100%;
 }
 .area-like{
-    background-color: #aba9a9;
+    background-color: #eeeeee;
     grid-area: area-like;
     display: grid;
     padding: 20px 20px;
+    border-bottom: 1px solid grey;
 
 
 }
@@ -172,7 +176,7 @@ a{
   font-weight: normal;
 }
 .add-list{
-    border: 1px solid red;
+
     padding: 8px 0;
     border-radius: 13px;
     background: #ff000080;
