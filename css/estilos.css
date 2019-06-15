@@ -90,7 +90,7 @@ h1,h2,h3,h4,h5,h6,ol,ul,p {
     grid-area: nav-left;
     background-color: #0b1128;
     color: white;
-    padding-left: 20px;
+    padding: 0 20px;
 }
 .header{
     display: grid;
@@ -122,14 +122,11 @@ a{
 }
 .playlist{
     display: grid;
-    padding: 10px 0;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(11,auto);
+    gap: 20px
 }
-.playlist a{
-    padding: 10px 0;
-}
-.num{
-  padding-right:20px; 
-}
+
 .friends img{
     height: 50px;
     width: 50px;
@@ -176,7 +173,7 @@ a{
   font-weight: normal;
 }
 .add-list{
-
+    border: 1px solid red;
     padding: 8px 0;
     border-radius: 13px;
     background: #ff000080;
