@@ -281,9 +281,19 @@ a{
   padding: 20px 10px;
   font-weight: normal;
 }
-.footer{
-    border: 1px solid grey;
-    grid-area: footer;
-    padding: 10px ;
-    background: red;
+.footer {
+  grid-area: footer;
+  background: yellowgreen;
+  padding: 10px;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  color: white;
+
+}
+.footer img {
+  vertical-align: middle;
+  border-radius: 49%
 }
