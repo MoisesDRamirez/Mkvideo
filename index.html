@@ -18,7 +18,7 @@
                 <i class="burguer-button icon-menu" id="boton"></i>
                
             </header>
-            <div class="container-movil">
+            <div class="container-movil" id="nav">
                 <div class="user " id="usuarios">
                     <a href="" class="settings">
                         <i class="icon-coin-dollar"></i> Mi suscripcion
@@ -218,37 +218,19 @@
         </footer>
     </div>
     <script>
-        const usr = document.querySelector('.user')
-        const playlist = document.querySelector('.playlist')
-        const list_friends = document.querySelector('.list-friends')
+        const navegacion = document.getElementById('nav')
         const boton = document.querySelector('#boton')
 
         boton.addEventListener('click', hideShow)
 
         function hideShow() {
-            if(usr.classList.contains('is-active')){
-                usr.classList.remove('is-active')
+            if(nav.classList.contains('is-active')){
+                nav.classList.remove('is-active')
 
             }
+
             else{
-                usr.classList.add('is-active')
-
-            }
-            if(playlist.classList.contains('is-active')){
-                playlist.classList.remove('is-active')
-
-            }
-            else{
-                playlist.classList.add('is-active')
-
-            }
-            if(list_friends.classList.contains('is-active')){
-
-                list_friends.classList.remove('is-active')
-
-            }
-            else{
-                list_friends.classList.add('is-active')
+                nav.classList.add('is-active')
 
             }
 

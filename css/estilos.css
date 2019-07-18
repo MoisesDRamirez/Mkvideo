@@ -359,8 +359,13 @@ a{
     grid-template-areas: "user user" 
                          "playlist list-friends ";
     grid-area: container-movil;
-                        
+    animation-name:actividad;    
+    position: absolute;
+    right: -100vw;
+    transition: 1s;
+    display: none                 
   }
+
   .burguer-button{
     display: grid;
     background: #ffffff7a;
@@ -369,11 +374,7 @@ a{
     grid-area: user;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 1fr;
-    position: absolute;
-    right: -100vw;
-    transition: 1s;
-    
+    grid-template-rows: 1fr;    
 
   }
   .playlist{
@@ -384,9 +385,6 @@ a{
     gap: 10px;
     grid-template-areas: "play-title play-title";
     padding: 15px;
-    transition: 1s;
-    position: absolute;
-    right: -100vw;
 
 
 
@@ -394,10 +392,6 @@ a{
   .list-friends{
     grid-area: list-friends;
     padding: 15px;
-    transition: 1s;
-    position: absolute;
-    right: -100vw;
-
     
   }
   .play-title{
@@ -405,11 +399,10 @@ a{
     padding: 0;
     padding-bottom: 10px;
   }
-  .user.is-active,
-  .playlist.is-active,
-  .list-friends.is-active{
+  .container-movil.is-active{
     position: relative;
     right: 0;
+    display: grid;
 
   }
 
