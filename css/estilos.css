@@ -12,7 +12,6 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -103,6 +102,14 @@ h1,h2,h3,h4,h5,h6,ol,ul,p {
 .header a {
     padding: 5px  0;
 }
+.burguer-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-content: center;
+}
 
 a{
     color: white;
@@ -186,6 +193,9 @@ a{
 }
 .button-video i{
   font-size: 20px;
+}
+.movil{
+  display:none;
 }
 .compartir{
   color: black;
@@ -304,4 +314,137 @@ a{
 .footer img {
   vertical-align: middle;
   border-radius: 49%
+}
+@media screen and (max-width: 1024px){
+    
+}
+@media screen and (max-width: 768px ) {
+  .container {
+    display: grid;
+    height: 100%;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas: "nav-left nav-left"
+                         " video video " 
+                         " area-like area-like" 
+                         " content area-advertisements" 
+                         "footer footer ";
+  }
+  .nav-left{
+    grid-area: nav-left;
+    background-color: #0b1128;
+    color: white;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto ;
+    grid-template-areas: "header header" 
+                         "container-movil container-movil"
+
+
+  }
+  .header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    position: relative;
+  
+  }
+  .container-movil{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "user user" 
+                         "playlist list-friends ";
+    grid-area: container-movil;
+                        
+  }
+  .burguer-button{
+    display: grid;
+    background: #ffffff7a;
+  }
+  .user{
+    grid-area: user;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 1fr;
+    position: absolute;
+    right: -100vw;
+    transition: 1s;
+    
+
+  }
+  .playlist{
+    grid-area: playlist;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(12,auto);
+    gap: 10px;
+    grid-template-areas: "play-title play-title";
+    padding: 15px;
+    transition: 1s;
+    position: absolute;
+    right: -100vw;
+
+
+
+  }
+  .list-friends{
+    grid-area: list-friends;
+    padding: 15px;
+    transition: 1s;
+    position: absolute;
+    right: -100vw;
+
+    
+  }
+  .play-title{
+    grid-area: play-title;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  .user.is-active,
+  .playlist.is-active,
+  .list-friends.is-active{
+    position: relative;
+    right: 0;
+
+  }
+
+  .button-video{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+  }
+  
+  .title-and-bottom{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40%;
+    justify-items: flex-start;
+
+  }
+
+  .movil{
+    display: grid;
+    padding: 8px 15px;
+    border-radius: 13px;
+    background: -webkit-linear-gradient(left,red 40%,rgb(250, 164, 164) 100%);
+    text-align: center;
+  }
+
+
+
+}
+@media screen and (max-width: 650px){
+
+}
+@media screen and (max-width: 480px){
+}
+@media screen and (max-width: 320px){
+    
 }
