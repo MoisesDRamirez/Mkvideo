@@ -119,21 +119,24 @@ a{
   display: grid;  
   padding: 20px 2px;
 }
-.play-title{
-  padding: 10% 0% 5% 0
-}
 .user{
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr;
+  gap:10px;
 }
 .playlist{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: repeat(11,auto);
-    gap: 20px
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(12,auto);
+  grid-template-areas: "play-title play-title";
+  gap: 20px;
 }
 
+.play-title{
+  padding: 10% 0% 5% 0;
+  grid-area: play-title;
+}
 .friends img{
     height: 50px;
     width: 50px;
@@ -176,7 +179,7 @@ a{
   font-weight: normal;
 }
 .view-video{
-  padding-bottom: 15px;
+  padding: 10px 0;
   font-weight: normal;
 }
 .add-list{
@@ -205,37 +208,33 @@ a{
   color: black;
 }
 .tecno{
-  border: 1px solid red;
   padding: 4px 0;
-  border-radius: 20px;
+  border-radius: 7px;
   background-color: red;
   color: white;
 }
 .balada{
-  border: 1px solid aqua;
   background-color: #35bdbd;
   color: white;
   padding: 4px 0;
-  border-radius: 20px;
+  border-radius: 7px;
 }
 .Romantica{
-  border: 1px solid  yellowgreen;
   background-color: yellowgreen;
   color: white;
   padding: 4px 0;
-  border-radius: 20px;
+  border-radius: 7px;
 }
 .Reggaeton{
-  border: 1px solid purple;
   background-color: purple;
   color: white;
   padding: 4px 0;
-  border-radius: 20px;
+  border-radius: 7px;
 }
 .content{
   grid-area: content;
   display: grid;
-  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-rows: 4rem 3rem 5rem 5rem 5rem 5rem 5rem;
   justify-content: center;
   align-items: center;
   height: 50%;
@@ -286,7 +285,7 @@ a{
   grid-area: area-advertisements;
   display: grid;
   grid-template-columns: 200px;
-  grid-template-rows: 2rem auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   justify-content: center;
   gap: 30px;
   padding-bottom: 10%;
@@ -295,8 +294,8 @@ a{
   color: black;
 }
 .title-sugerencia{
-
-  padding: 20px 10px;
+  padding-top: 25px;
+  text-align: center;
   font-weight: normal;
 }
 .footer {
@@ -386,8 +385,6 @@ a{
     grid-template-areas: "play-title play-title";
     padding: 15px;
 
-
-
   }
   .list-friends{
     grid-area: list-friends;
@@ -403,6 +400,7 @@ a{
     position: relative;
     right: 0;
     display: grid;
+    transition: 1s
 
   }
 
@@ -424,20 +422,138 @@ a{
 
   .movil{
     display: grid;
-    padding: 8px 15px;
-    border-radius: 13px;
+    padding: 8px 8px;
+    border-radius: 7px;
     background: -webkit-linear-gradient(left,red 40%,rgb(250, 164, 164) 100%);
-    text-align: center;
+  }
+  .guardar{
+    padding-right: 25px;
+  }
+  .add-list{
+    display: none;
+  }
+  .content{
+    padding-left:20px; 
   }
 
 
 
 }
 @media screen and (max-width: 650px){
+  .container {
+    display: grid;
+    height: 100%;
+    grid-template-columns:  1fr ;
+    grid-template-rows: auto auto auto auto auto 1fr;
+    grid-template-areas: "nav-left "
+                         " video  " 
+                         " area-like " 
+                         " content " 
+                         "area-advertisements " 
+                         "footer ";
+  }
+  .content{
+    grid-area: content;
+    display: grid;
+    grid-template-rows: 4rem 3rem 5rem 5rem 5rem 5rem 5rem;
+    align-items: center;
+    justify-content: initial;
+  }
+  .input{
+    width: 75%;
+  }
+  .coment-list {
+    display: grid;
+    grid-template-columns: 4rem 60%;
+    grid-template-rows: 2rem auto;
+    grid-template-areas: "img leo" "img texto";
+  }
+  .leo{
+    padding: 5px 0;
+  }
+  .area-advertisements{
+    grid-template-columns: 50%;
+  }
+  .area-advertisements img{
+    width: 100%;
+    -webkit-box-shadow: 2px -2px 19px 5px rgba(0,0,0,0.27);
+    -moz-box-shadow: 2px -2px 19px 5px rgba(0,0,0,0.27);
+    box-shadow: 2px -2px 19px 5px rgba(0,0,0,0.27);
+  
+  }
+  .area-advertisements p{
+    width: 80%;
+    padding: 5px 33px;
+  }
+  .footer{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr
+  }
 
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 500px){
+  .user{
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-around;
+  }
+  .area-like{
+    padding:20px 10px;
+  }
+  .title-and-botton{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0;
+    justify-items: initial;
+  }
+  .movil{
+    display: none;
+  }
+  .button-video{
+    display: grid;
+    grid-template-columns: auto auto auto auto;    
+    grid-template-areas: "add-list add-list compartir guardar " "tecno balada Romantica Reggaeton "
+  }
+  .add-list{
+    display: initial;
+    grid-area: add-list;
+  }
+  .compartir{
+    grid-area: compartir;
+  }
+  .guardar{
+    grid-area:guardar;
+  }
+  .tecno{
+    grid-area: tecno;
+  }
+  .balada{
+    grid-area: balada;
+  }
+  .Romantica{
+    grid-area: Romantica;
+  }
+  .Reggaeton{
+    grid-area: Reggaeton;
+  }
+  .input{
+    width: 85%;
+  }
+  .coment-list {
+    grid-template-columns: 4rem 65%;
+
+  }
+  .area-advertisements{
+    grid-template-columns: 70%;
+  }
+
 }
 @media screen and (max-width: 320px){
-    
+  .input{
+    width: 95%;
+  }
+  .coment-list {
+    grid-template-columns: 4rem 75%;
+
+  }
 }
