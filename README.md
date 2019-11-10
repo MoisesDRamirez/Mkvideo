@@ -1,4 +1,4 @@
-# Mkvideo
+# Mkvideo 🎬
 Este **proyecto** fue creado para ver videos 😉. 
 > Desarrollado por **Mi 💪** para poner en practicas  mis habilidades como programador Frontend con cursos de la carrera **Frontend De Platzi ✌ **.
 ## Habilidades Aprendidas 
